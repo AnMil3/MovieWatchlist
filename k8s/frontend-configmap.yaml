@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+  namespace: movie-watchlist
+data:
+  # NEXT_PUBLIC_API_URL is baked in at image build time; runtime-only
+  # settings for the Next.js server live here.
+  PORT: "3000"
+  HOSTNAME: "0.0.0.0"

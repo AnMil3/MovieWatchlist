@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: movie-watchlist
+data:
+  # Browser requests go through the ingress, so allow the ingress host.
+  CORS_ORIGINS: "http://movie-watchlist.local,http://localhost:3000"
